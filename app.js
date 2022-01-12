@@ -1,19 +1,28 @@
 // Variable that holds the command-line arguments.
 const profileDataArgs = process.argv.slice(2, process.argv.length);
+// Combined two variables w/Assignment Destructuring, which assigns elements of an array to variable names in a single expression.
 const [name, github] = profileDataArgs;
-/* ^^This combination aka Assignment Destructuring (assigns elements of an array to variable names in a single expression) can also be written as two separate variables...
-const name = profileDataArgs[0];
-const github = profileDataArgs[1];
 
-const generatePage = (username, githubName) => `Name: ${username}, Github: ${githubName}`;
-^^You can also write the function above this way to create Multi-line Strings...
-*/
+// Function to dynamically generate HTML file.
 const generatePage = (userName, githubName) => {
   return `
-    Name: ${userName}
-    GitHub: ${githubName}
+  <!DOCTYPE html> 
+  <html lang="en"> 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio Demo</title>
+  </head>
+
+  <body>
+    <h1>${name}</h1>
+    <h2><a href="https://github.com/${github}">Github</a></h2>
+  </body>
+  </html>
   `;
 };
 
+console.log(name, github);
 // Call
-console.log(generatePage(Name, github));
+console.log(generatePage(name, github));
