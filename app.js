@@ -2,6 +2,7 @@
 const profileDataArgs = process.argv.slice(2, process.argv.length);
 // Combined two variables w/Assignment Destructuring, which assigns elements of an array to variable names in a single expression.
 const [name, github] = profileDataArgs;
+const fs = require('fs');
 
 // Function to dynamically generate HTML file.
 const generatePage = (userName, githubName) => {
@@ -23,6 +24,7 @@ const generatePage = (userName, githubName) => {
   `;
 };
 
+// FS Module that replaced the function call() & console.log().
 fs.writeFile('index.html', generatePage(name, github), err => {
   if (err) throw err;
 
