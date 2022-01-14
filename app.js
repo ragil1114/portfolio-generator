@@ -50,7 +50,7 @@ const inquirer = require('inquirer');
       {
         type: 'input',
         name: 'description',
-        message: 'Provide a description of the project (Required)'
+        message: 'Provide a description of the project. (Required)'
       },
       {
         type: 'checkbox',
