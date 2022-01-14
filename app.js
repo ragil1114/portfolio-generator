@@ -35,12 +35,17 @@ const inquirer = require('inquirer');
   promptUser().then(answers => console.log(answers));
 
 
-  const promptProject = () => {
+  const promptProject = portfolioData => {
     console.log(`
   =================
   Add a New Project
   =================
   `);
+
+    // If there's no 'projects' array property, create one
+    if (!portfolioData.projects) {
+      portfolioData.projects = [];
+    }
     return inquirer.prompt([
       {
         type: 'input',
