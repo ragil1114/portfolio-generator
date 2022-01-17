@@ -1,11 +1,11 @@
 const inquirer = require('inquirer');
 // Global variable to allow fs module to work in the app.
-//const fs = require('fs');
-//const generatePage = require('./src/page-template.js');
+const fs = require('fs');
+const generatePage = require('./src/page-template.js');
 
 //const pageHTML = generatePage(name, github);
 
-// FS Module that replaced the function call() & console.log().
+// FS Module that replaced the function call()
 //fs.writeFile('./index.html', pageHTML, err => {
   //if (err) throw err;
 
@@ -154,6 +154,12 @@ const inquirer = require('inquirer');
   promptUser()
   .then(promptProject)
   .then(portfolioData => {
-    console.log(portfolioData);
+    const pageHTML = generatePage(portfolioData);
+
+    // fs.writeFile('./index.html', pageHTML, err => {
+    //   if (err) throw new Error(err);
+
+    //   console.log('Page created! Check out index.html in this directory to see it!');
+    // });
   });
   
