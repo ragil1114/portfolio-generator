@@ -12,18 +12,7 @@ const generateAbout = aboutText => {
   `;
 };
 
-// create the projects section
-const generateProjects = projectsArr => {
-  // get array of just featured projects
-  const featuredProjects = projectsArr.filter(project => {
-    if (project.feature) {
-      return true;
-    } else {
-      return false;
-    }
-  });
-
-// Get array of all featured & non-featured projects using .filter() & .map() Array Methods.
+// Get array of all featured & non-featured projects using .filter() & .map() Array Methods, to create the Projects Section.
 const generateProjects = projectsArr => {
   return `
     <section class="my-3" id="portfolio">
@@ -106,5 +95,4 @@ module.exports = templateData => {
     </body>
     </html>
     `;
-  }
 };
