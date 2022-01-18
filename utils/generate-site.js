@@ -37,3 +37,6 @@ const copyFile = () => {
         });
     });
 };
+
+// to export above two functions into app.js file
+module.exports = { writeFile, copyFile };

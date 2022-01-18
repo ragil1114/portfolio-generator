@@ -1,7 +1,6 @@
 const inquirer = require('inquirer');
-// Global variable to allow fs module to work in the app.
-const fs = require('fs');
 const generatePage = require('./src/page-template.js');
+const { writeFile, copyFile } = require('./utils/generate-site.js');
 
 const promptUser = () => {
   return inquirer.prompt([
