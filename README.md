@@ -14,4 +14,4 @@ This is a simple Node.js app using the Inquirer Prompt found w/in the npm packag
 - GitHub Repo: https://github.com/ragil1114/portfolio-generator.git
 
 ## Images:
-![demo](https://github.com/ragil1114/bookWorm-projectRepo/blob/src/images/demo.png)
+![demo](https://github.com/ragil1114/portfolio-generator.git/blob/main/src/images/demo.png)
